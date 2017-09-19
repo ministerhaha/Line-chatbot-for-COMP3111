@@ -85,6 +85,6 @@ public class KitchenSinkTester {
 			thrown = true;
 		}
 		assertThat(!thrown);
-		assertThat(result.equals("Hey, how things going?"));
+		assertThat(result.equals("checking"));
 	}
 }
