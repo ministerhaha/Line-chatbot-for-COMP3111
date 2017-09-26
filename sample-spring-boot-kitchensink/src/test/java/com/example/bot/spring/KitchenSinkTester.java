@@ -63,7 +63,7 @@ public class KitchenSinkTester {
 		}
 		assertThat(thrown);
 	}
-	/*
+	
 	@Test
 	public void testFound() throws Exception {
 		boolean thrown = false;
@@ -76,7 +76,7 @@ public class KitchenSinkTester {
 		assertThat(!thrown).isEqualTo(true);
 		assertThat(result).isEqualTo("def");
 	}
-	
+	/*
 	@Test
 	public void testFound1() throws Exception {
 		boolean thrown = false;

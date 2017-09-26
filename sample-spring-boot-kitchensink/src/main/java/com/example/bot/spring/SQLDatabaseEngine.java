@@ -15,7 +15,7 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 	@Override
 	String search(String text) throws Exception {
 		//Write your code here
-	
+		/*
 		Connection c = getConnection();
 		Statement stmt = null;
 		String result = null;
@@ -40,13 +40,34 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 				log.info("Exception while closing database: {}", ex.toString());
 			}
 		}
-		/*if (result != null)
+		if (result != null)
 			return result;
-		//throw new Exception("NOT FOUND");
+		throw new Exception("NOT FOUND");
 		
 		return null;*/
-		String test = "fuck";
-		return test;
+		String result = null;
+		try {
+			Connection c = this.getConnection();
+			PreparedStatement stmt = c.prepareStatement("SELECT * FROM chatbotdb;");
+			ResultSet rs = stmt.executeQuery();
+			String kw = null;
+			String rp = null;
+			while(rs.next()) {
+				kw = rs.getString(1);
+				rp = rs.getString(2);
+				if (text.toLowerCase().equals(kw.toLowerCase())) {
+					result = rp;
+				}
+			}
+			rs.close();
+			stmt.close();
+			c.close(); 
+		}catch(Exception e) {
+			log.info("Exception while reading database: {}", e.toString());
+		}
+		if (result != null)
+			return result;
+		return null;
 	}
 	
 	
