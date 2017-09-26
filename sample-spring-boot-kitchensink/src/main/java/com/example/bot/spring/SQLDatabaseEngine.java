@@ -15,36 +15,6 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 	@Override
 	String search(String text) throws Exception {
 		//Write your code here
-		/*
-		Connection c = getConnection();
-		Statement stmt = null;
-		String result = null;
-		ResultSet rs = stmt.executeQuery( "SELECT * FROM chatbotdb;" );
-		try {
-			stmt = c.createStatement();
-			while(rs.next()) {
-				String kw = rs.getString("keyword");
-				String rp = rs.getString("response");
-				if (text.toLowerCase().equals(kw.toLowerCase())) {
-					result = rp;
-				}
-			}
-		}catch(Exception e) {
-			log.info("Exception while reading database: {}", e.toString());
-		}finally {
-			try {
-				rs.close();
-		        stmt.close();
-		        c.close();
-			} catch (Exception ex) {
-				log.info("Exception while closing database: {}", ex.toString());
-			}
-		}
-		if (result != null)
-			return result;
-		throw new Exception("NOT FOUND");
-		
-		return null;*/
 		String result = null;
 		try {
 			Connection c = this.getConnection();
