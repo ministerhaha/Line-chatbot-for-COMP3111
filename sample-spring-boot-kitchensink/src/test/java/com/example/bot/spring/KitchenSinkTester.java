@@ -71,8 +71,8 @@ public class KitchenSinkTester {
 		} catch (Exception e) {
 			thrown = true;
 		}
-		assertThat(!thrown);
-		assertThat(result.equals("def"));
+		assertThat(!thrown).isEqualTo(true);
+		assertThat(result).isEqualTo("def");
 	}
 	
 	@Test
@@ -84,7 +84,7 @@ public class KitchenSinkTester {
 		} catch (Exception e) {
 			thrown = true;
 		}
-		assertThat(!thrown);
-		assertThat(result.equals("Hey, how things going?"));
+		assertThat(!thrown).isEqualTo(true);
+		assertThat(result).isEqualTo("Hey, how things going?");
 	}
 }
