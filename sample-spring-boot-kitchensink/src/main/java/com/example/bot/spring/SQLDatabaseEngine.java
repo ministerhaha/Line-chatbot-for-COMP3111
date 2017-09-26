@@ -67,7 +67,7 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 		}
 		if (result != null)
 			return result;
-		return null;
+		throw new Exception("NOT FOUND");
 	}
 	
 	
