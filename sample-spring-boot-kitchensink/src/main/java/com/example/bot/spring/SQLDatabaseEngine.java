@@ -15,6 +15,7 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 	@Override
 	String search(String text) throws Exception {
 		//Write your code here
+		System.out.println("testing");
 		Connection c = getConnection();
 		Statement stmt = null;
 		String result = null;
