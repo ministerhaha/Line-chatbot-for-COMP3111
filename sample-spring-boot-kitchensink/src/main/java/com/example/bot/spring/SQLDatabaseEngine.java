@@ -15,7 +15,7 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 	@Override
 	String search(String text) throws Exception {
 		//Write your code here
-		System.out.println("testing");
+	
 		Connection c = getConnection();
 		Statement stmt = null;
 		String result = null;
@@ -40,11 +40,13 @@ public class SQLDatabaseEngine extends DatabaseEngine {
 				log.info("Exception while closing database: {}", ex.toString());
 			}
 		}
-		if (result != null)
+		/*if (result != null)
 			return result;
 		//throw new Exception("NOT FOUND");
 		
-		return null;
+		return null;*/
+		String test = "fuck";
+		return test;
 	}
 	
 	
