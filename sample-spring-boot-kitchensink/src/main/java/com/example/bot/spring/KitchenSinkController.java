@@ -234,7 +234,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-           /* case "carousel": {
+            case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
@@ -242,12 +242,12 @@ public class KitchenSinkController {
                                         new URIAction("Go to line.me",
                                                       "https://line.me"),
                                         new PostbackAction("Say hello1",
-                                                           "hello Ã£ï¿½âþýÃ£þýšâþýÃ£ï¿½Â«Ãþý¿½Â¡Ã£ï¿½Âþý)
+                                                           "hello Ã£ï¿½â€œÃ£â€šâ€œÃ£ï¿½Â«Ã£ï¿½Â¡Ã£ï¿½Â¯")
                                 )),
                                 new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
-                                        new PostbackAction("Ã¨Â¨þýþýhello2",
-                                                           "hello Ã£ï¿½âþýÃ£þýšâþýÃ£ï¿½Â«Ãþý¿½Â¡Ã£ï¿½Âþý,
-                                                           "hello Ã£ï¿½âþýÃ£þýšâþýÃ£ï¿½Â«Ãþý¿½Â¡Ã£ï¿½Âþý),
+                                        new PostbackAction("Ã¨Â¨â‚¬ hello2",
+                                                           "hello Ã£ï¿½â€œÃ£â€šâ€œÃ£ï¿½Â«Ã£ï¿½Â¡Ã£ï¿½Â¯",
+                                                           "hello Ã£ï¿½â€œÃ£â€šâ€œÃ£ï¿½Â«Ã£ï¿½Â¡Ã£ï¿½Â¯"),
                                         new MessageAction("Say message",
                                                           "Rice=Ã§Â±Â³")
                                 ))
@@ -256,7 +256,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-*/
+
             default:
             	String reply = null;
             	try {
